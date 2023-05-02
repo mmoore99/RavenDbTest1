@@ -14,8 +14,6 @@ namespace RavenDbTest1
             // and can only be set once per test run.
             ConfigureServer(new TestServerOptions
             {
-                //FrameworkVersion = "6.0.0+",
-                //ServerDirectory = @"C:\Program Files\RavenDB\RavenDB-5.4.103\Server",
                 DataDirectory = "C:\\RavenDBTestDir"
             });
         }
@@ -30,33 +28,33 @@ namespace RavenDbTest1
         {
             // GetDocumentStore() evokes the Document Store, which establishes and manages communication
             // between your client application and a RavenDB cluster via HTTP requests.
-            using (var store = GetDocumentStore())
+            using var store = GetDocumentStore();
+            //store.ExecuteIndex(new TestDocumentByName());
+            using (var session = store.OpenSession())
             {
-                store.ExecuteIndex(new TestDocumentByName());
-                using (var session = store.OpenSession())
-                {
-                    session.Store(new TestDocument { Name = "Hello world!" });
-                    session.Store(new TestDocument { Name = "Goodbye..." });
-                    session.SaveChanges();
-                }
-                // If we want to query documents, sometimes we need to wait for the indexes to catch up  
-                // to prevent using stale indexes.
-                WaitForIndexing(store);
+                session.Store(new TestDocument { Name = "Hello world!" });
+                session.Store(new TestDocument { Name = "Goodbye..." });
+                session.SaveChanges();
+            }
+            // If we want to query documents, sometimes we need to wait for the indexes to catch up  
+            // to prevent using stale indexes.
+            WaitForIndexing(store);
 
-                // Sometimes we want to debug the test itself. This method redirects us to the studio
-                // so that we can see if the code worked as expected (in this case, created two documents).
+            // Sometimes we want to debug the test itself. This method redirects us to the studio
+            // so that we can see if the code worked as expected (in this case, created two documents).
+            // WaitForUserToContinueTheTest(store);
+
+            // Queries are defined in the session scope.
+            // If there is no relevant index to quickly answer the query, RavenDB creates an auto-index
+            // based on the query parameters.
+            // This query will use the static index defined in lines 63-70 and filter the results by name.
+            using (var session = store.OpenSession())
+            {
+                // var query = session.Query<TestDocument, TestDocumentByName>()
+                var query = session.Query<TestDocument>()
+                    .Where(x => x.Name == "hello world!").ToList();
                 WaitForUserToContinueTheTest(store);
-
-                // Queries are defined in the session scope.
-                // If there is no relevant index to quickly answer the query, RavenDB creates an auto-index
-                // based on the query parameters.
-                // This query will use the static index defined in lines 63-70 and filter the results by name.
-                using (var session = store.OpenSession())
-                {
-                    var query = session.Query<TestDocument, TestDocumentByName>()
-                        .Where(x => x.Name == "hello").ToList();
-                    Assert.Single(query);
-                }
+                Assert.Single(query);
             }
         }
     }
