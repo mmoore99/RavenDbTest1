@@ -1,0 +1,206 @@
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T16:55:34.8012399Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 48804, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 38.375 GBytes Available Memory, 38.415 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T16:55:42.2125935Z, 45, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:55:42.2132098Z, 43, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:55:42.2125790Z, 36, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:55:42.2225613Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-05-02T16:55:42.2229367Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T16:57:48.5128201Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 51312, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 38.386 GBytes Available Memory, 38.426 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T16:58:48.4525633Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+2023-05-02T16:58:48.4631658Z, 35, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:58:48.4636427Z, 36, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:58:48.4638963Z, 16, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:58:48.4631400Z, 31, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T16:59:03.9647248Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 52640, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 38.134 GBytes Available Memory, 38.174 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T16:59:07.7322643Z, 15, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T16:59:07.7462694Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-05-02T16:59:07.7466376Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T16:59:33.6519534Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 58704, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 38.027 GBytes Available Memory, 38.067 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:00:08.3974093Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:00:31.0701294Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 48412, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 37.673 GBytes Available Memory, 37.713 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:01:40.5133764Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+2023-05-02T17:01:40.5243856Z, 30, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:01:40.5245880Z, 44, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:01:40.5248453Z, 12, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:01:40.5243703Z, 33, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:01:57.6839989Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 52144, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 37.912 GBytes Available Memory, 37.953 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:02:50.8879596Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+2023-05-02T17:02:50.8969989Z, 41, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:02:50.8973879Z, 51, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:02:50.8971417Z, 50, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:02:50.8979333Z, 49, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:04:56.4613998Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 60136, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 38.237 GBytes Available Memory, 38.277 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:05:00.1942868Z, 35, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:05:00.1942847Z, 12, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:05:00.2058812Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-05-02T17:05:00.2062339Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:09:18.6313477Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 46648, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 37.676 GBytes Available Memory, 37.716 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:09:22.3645491Z, 31, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:09:22.3777242Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-05-02T17:09:22.3780900Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:24:40.7296046Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 30004, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 51.822 GBytes Available Memory, 51.86 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:24:49.8549265Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-05-02T17:24:49.8553179Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:25:33.3227710Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 4432, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 51.104 GBytes Available Memory, 51.143 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:27:15.1428389Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+2023-05-02T17:27:17.1665018Z, 44, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:27:17.1664912Z, 54, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:27:17.1673924Z, 17, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:27:17.1666565Z, 3, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:27:28.3425608Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 26436, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 47.695 GBytes Available Memory, 47.736 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:27:32.6933953Z, 47, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:27:32.6931303Z, 15, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:27:32.6931312Z, 31, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:27:32.7063530Z, 1, Operations, Server, Raven.Server.Program, Server has shut down
+2023-05-02T17:27:32.7078436Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+Time, Thread, Level, Source, Logger, Message, Exception
+2023-05-02T17:27:40.8051925Z, 1, Operations, Server, Raven.Server.Program,  Build 54038, Version 5.4, SemVer 5.4.103, Commit dd4c794
+ PID 19584, 64 bits, 32 Cores, Arch: X64
+ 63.924 GBytes Physical Memory, 46.466 GBytes Available Memory, 46.506 GBytes Calculated Available Memory, 0 Bytes Scratch Dirty Memory
+ Using GC in server concurrent mode.
+librvnpal Expected Version: 52000, librvnpal Current Version: 52000
+2023-05-02T17:28:42.8282565Z, 2, Operations, Server, Raven.Server.Program, Server is about to shut down (interactive mode)
+2023-05-02T17:28:44.8512879Z, 29, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:28:44.8512879Z, 15, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
+2023-05-02T17:28:44.8518621Z, 53, Operations, Server/TCP, Raven.Server.RavenServer, Failed to accept new tcp connection again, will wait 1 seconds before retrying, EXCEPTION: System.InvalidOperationException: Not listening. You must call the Start() method before calling this method.
+   at System.Net.Sockets.TcpListener.AcceptSocketAsync(CancellationToken cancellationToken)
+   at System.Net.Sockets.TcpListener.AcceptTcpClientAsync()
+   at Raven.Server.RavenServer.AcceptTcpClientAsync(TcpListener listener) in C:\Builds\RavenDB-Stable-5.4\54038\src\Raven.Server\RavenServer.cs:line 2208
