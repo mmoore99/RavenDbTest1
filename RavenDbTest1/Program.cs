@@ -1,75 +1,116 @@
-﻿using Raven.Client.Documents;
-using Raven.Client.Documents.Indexes;
+﻿using System.Reflection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Raven.Client.Documents;
+using Raven.Client.Json.Serialization;
+using Raven.Client.Json.Serialization.NewtonsoftJson;
 using Raven.TestDriver;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace RavenDbTest1
 {
 
     public class RavenDBTestDriver : RavenTestDriver
     {
-        public RavenDBTestDriver()
+        private readonly ITestOutputHelper _testOutputHelper;
+        public RavenDBTestDriver(ITestOutputHelper testOutputHelper)
         {
-            // ConfigureServer() must be set before calling GetDocumentStore()
-            // and can only be set once per test run.
+            _testOutputHelper = testOutputHelper;
             ConfigureServer(new TestServerOptions
             {
                 DataDirectory = "C:\\RavenDBTestDir"
             });
         }
-        // This allows us to modify the conventions of the store we get from 'GetDocumentStore'
         protected override void PreInitialize(IDocumentStore documentStore)
         {
             documentStore.Conventions.MaxNumberOfRequestsPerSession = 50;
+            documentStore.Conventions.IdentityPartsSeparator = '-';
+            
+            var serializationConventions = new NewtonsoftJsonSerializationConventions
+            {
+                CustomizeJsonSerializer = x => { x.ObjectCreationHandling = ObjectCreationHandling.Replace; },
+            };
+            serializationConventions.JsonContractResolver = new CustomContractResolver(serializationConventions);
+            documentStore.Conventions.Serialization = serializationConventions;
         }
 
         [Fact]
         public void MyFirstTest()
         {
-            // GetDocumentStore() evokes the Document Store, which establishes and manages communication
-            // between your client application and a RavenDB cluster via HTTP requests.
+            var propertyValue = "test value";
+
             using var store = GetDocumentStore();
-            //store.ExecuteIndex(new TestDocumentByName());
+            
             using (var session = store.OpenSession())
             {
-                session.Store(new TestDocument { Name = "Hello world!" });
-                session.Store(new TestDocument { Name = "Goodbye..." });
+                session.Store(new TestDocument
+                {
+                    PropertyWithJsonPropertyAttribute = propertyValue,
+                    PropertyWithoutJsonPropertyAttribute = propertyValue
+                });
                 session.SaveChanges();
             }
-            // If we want to query documents, sometimes we need to wait for the indexes to catch up  
-            // to prevent using stale indexes.
+
             WaitForIndexing(store);
 
-            // Sometimes we want to debug the test itself. This method redirects us to the studio
-            // so that we can see if the code worked as expected (in this case, created two documents).
-            // WaitForUserToContinueTheTest(store);
-
-            // Queries are defined in the session scope.
-            // If there is no relevant index to quickly answer the query, RavenDB creates an auto-index
-            // based on the query parameters.
-            // This query will use the static index defined in lines 63-70 and filter the results by name.
             using (var session = store.OpenSession())
             {
-                // var query = session.Query<TestDocument, TestDocumentByName>()
-                var query = session.Query<TestDocument>()
-                    .Where(x => x.Name == "hello world!").ToList();
-                WaitForUserToContinueTheTest(store);
-                Assert.Single(query);
+                var query1 = session.Query<TestDocument>()
+                    .Where(x => x.PropertyWithoutJsonPropertyAttribute == propertyValue).ToList();
+                
+                var query2 = session.Query<TestDocument>()
+                    .Where(x => x.PropertyWithJsonPropertyAttribute == propertyValue).ToList();
+                
+                //WaitForUserToContinueTheTest(store);
+                _testOutputHelper.WriteLine($"query1 count = {query1.Count}");
+                _testOutputHelper.WriteLine($"query2 count = {query2.Count}");
+                Assert.Single(query1);
+                Assert.Single(query2);
             }
-        }
-    }
-    // AbstractIndexCreationTask allows you to create and manually define a static index. 
-    public class TestDocumentByName : AbstractIndexCreationTask<TestDocument>
-    {
-        public TestDocumentByName()
-        {
-            Map = docs => from doc in docs select new { doc.Name };
-            Indexes.Add(x => x.Name, FieldIndexing.Search);
         }
     }
 
     public class TestDocument
     {
-        public string Name { get; set; }
+        [JsonProperty("propertyWithJsonPropertyAttribute")]
+        public string PropertyWithJsonPropertyAttribute { get; set; }
+        public string PropertyWithoutJsonPropertyAttribute { get; set; }
+    }
+    
+    public class CustomContractResolver : DefaultRavenContractResolver
+    {
+        public CustomContractResolver(ISerializationConventions conventions) : base(conventions)
+        {
+        }
+        public static bool CanWrite(MemberInfo memberInfo)
+        {
+            switch (memberInfo)
+            {
+                case PropertyInfo _:
+                    return ((PropertyInfo)memberInfo).CanWrite;
+                case FieldInfo _:
+                    return true;
+            }
+
+            throw new NotSupportedException("Cannot calculate CanWrite on " + memberInfo);
+        }
+
+        protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
+        {
+            // Let the base class create all the properties. If [JsonProperty] attribute exists the name in the attribute will be assigned to the property
+            var properties = base.CreateProperties(type, memberSerialization);
+
+            if (type.FullName != typeof(TestDocument).FullName
+                && (type.DeclaringType == null || type.DeclaringType.FullName != typeof(TestDocument).FullName)) return properties;
+            
+            // Now inspect each property and replace the name with the C# property name which is PascalCase
+            foreach (var property in properties)
+            {
+                property.PropertyName = property.UnderlyingName;
+            }
+
+            return properties;
+        }
     }
 }
