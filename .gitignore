@@ -263,3 +263,7 @@ paket-files/
 __pycache__/
 *.pyc
 
+
+RavenDbTest1/obj/Debug/net6.0/
+
+RavenDbTest1/bin/Debug/net6.0/
